@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- **setmemos - will add constant byte in memory
- *@s: pointer
- *@b: byte
- *@n: num of bytes
- *Return: pointer to mem
+ **setmemos - adds constant byte in memory
+ *@s: a pointer
+ *@b: the byte
+ *@n: number of bytes
+ *Return: a pointer
  */
 char *setmemos(char *s, char b, unsigned int n)
 {
@@ -17,8 +17,8 @@ char *setmemos(char *s, char b, unsigned int n)
 }
 
 /**
- * string_free - will free a string
- * @pp: string
+ * string_free -  frees a string
+ * @pp: a string
  */
 void string_free(char **pp)
 {
@@ -32,11 +32,11 @@ void string_free(char **pp)
 }
 
 /**
- * _realloc - function that will realloc block of memory
- * @ptr: pointer
- * @old_size: parameter
- * @new_size: parameter
- * Return: ptr
+ * _realloc - a function to reallocate block of memory
+ * @ptr: a pointer
+ * @old_size: a parameter
+ * @new_size: a parameter
+ * Return: a ptr
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {

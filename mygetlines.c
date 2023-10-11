@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * input_buff - multiple commands
- * @info: parameter
- * @buf: address
- * @len: length address
- * Return: num of bytes
+ * input_buff - multiple cmds
+ * @info: a parameter
+ * @buf: the address
+ * @len: the address length
+ * Return: the number of bytes
  */
 ssize_t input_buff(info_t *info, char **buf, size_t *len)
 {
@@ -44,9 +44,9 @@ ssize_t input_buff(info_t *info, char **buf, size_t *len)
 }
 
 /**
- * get_input - does not include new line
- * @info: parameter
- * Return: bytes read
+ * get_input - will not include new line
+ * @info: the parameter
+ * Return: the bytes read
  */
 ssize_t get_input(info_t *info)
 {
@@ -88,10 +88,10 @@ ssize_t get_input(info_t *info)
 }
 
 /**
- * read_buff - Will read buffer
- * @info: parameter
- * @buf: buffer
- * @i: size
+ * read_buff - handles read buffer
+ * @info: the parameter
+ * @buf: the buffer
+ * @i: the buffer size
  * Return: r
  */
 ssize_t read_buff(info_t *info, char *buf, size_t *i)
@@ -107,10 +107,10 @@ ssize_t read_buff(info_t *info, char *buf, size_t *i)
 }
 
 /**
- * _getline - Will get following line
- * @info: parameter
- * @ptr: pointer
- * @length: length
+ * _getline - handles get following line
+ * @info: the parameter
+ * @ptr: a pointer
+ * @length: the length
  * Return: s
  */
 int _getline(info_t *info, char **ptr, size_t *length)
@@ -153,8 +153,8 @@ int _getline(info_t *info, char **ptr, size_t *length)
 }
 
 /**
- * sigintHandler - Will blocks ctrl-C
- * @sig_num: signal num
+ * sigintHandler - function to blocks ctrl-C
+ * @sig_num: the signal num
  * Return: void
  */
 void sigintHandler(__attribute__((unused))int sig_num)

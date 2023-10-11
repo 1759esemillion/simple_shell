@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * copy_histories - Will show history list
- * @info: structure
+ * copy_histories - shows history list
+ * @info: a struct
  *  Return: Always 0
  */
 int copy_histories(info_t *info)
@@ -12,9 +12,9 @@ int copy_histories(info_t *info)
 }
 
 /**
- * unsett_alias - sets alias to string
- * @info: parameter struct
- * @str: the string alias
+ * unsett_alias - converts alias to string
+ * @info: struct
+ * @str: the string
  * Return: 0 successful otherwise 1
  */
 int unsett_alias(info_t *info, char *str)
@@ -34,8 +34,8 @@ int unsett_alias(info_t *info, char *str)
 }
 
 /**
- * sett_alias - Will set alias
- * @info: struct
+ * sett_alias - sets alias
+ * @info: a struct
  * @str: string
  * Return: 0 if successful otherwise 1
  */
@@ -54,8 +54,8 @@ int sett_alias(info_t *info, char *str)
 }
 
 /**
- * print_alias - Will print alias str
- * @node: node
+ * print_alias - print alias string
+ * @node: a node
  * Return: 0 if successfull otherwise 1
  */
 int print_alias(list_t *node)
@@ -76,8 +76,8 @@ int print_alias(list_t *node)
 }
 
 /**
- * copy_alias - Will work like builtin alias
- * @info: structure
+ * copy_alias - worksas  builtin alias
+ * @info: a structure
  *  Return: 0
  */
 int copy_alias(info_t *info)

@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * hsh - function for shell
- * @info: struct
- * @av:  argvect
+ * hsh - shell function
+ * @info: a struct
+ * @av: the  argvect
  * Return: 0 if successful otherwise 1
  */
 int hsh(info_t *info, char **av)
@@ -43,8 +43,8 @@ int hsh(info_t *info, char **av)
 }
 
 /**
- * find_builtin - finds a builtin command
- * @info: structure
+ * find_builtin - check for a builtin command
+ * @info: a structure
  * Return: -1 when builtin is found
  */
 int find_builtin(info_t *info)
@@ -73,8 +73,8 @@ int find_builtin(info_t *info)
 }
 
 /**
- * find_cmd - Will find cmd
- * @info: structure
+ * find_cmd - finds cmd
+ * @info: a structure
  * Return: void
  */
 void find_cmd(info_t *info)
@@ -114,8 +114,8 @@ void find_cmd(info_t *info)
 }
 
 /**
- * fork_cmd - function to fork exec
- * @info: structure
+ * fork_cmd - a function that fork executeable file
+ * @info: a  structure
  * Return: void
  */
 void fork_cmd(info_t *info)

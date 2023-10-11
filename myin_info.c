@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * clear_info - Will ini info_t
- * @info: structure
+ * clear_info - function to initiate info_t
+ * @info: a struc
  */
 void clear_info(info_t *info)
 {
@@ -13,9 +13,9 @@ void clear_info(info_t *info)
 }
 
 /**
- * set_info - Will ini info_t
- * @info: structure
- * @av: argvect
+ * set_info - handle initiate info_t
+ * @info: a struc
+ * @av: the argvect
  */
 void set_info(info_t *info, char **av)
 {
@@ -45,8 +45,8 @@ void set_info(info_t *info, char **av)
 }
 
 /**
- * free_info - Will handle info_t
- * @info: structure
+ * free_info - handles info_t
+ * @info: struc
  * @all: true if freeing all fields
  */
 void free_info(info_t *info, int all)

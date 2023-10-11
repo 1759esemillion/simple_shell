@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * copy_exit - Will handle exiting shell
- * @info: structure
+ * copy_exit - function to handle exiting shell
+ * @info: a structure
  *  Return: Will exit according to status
  *         0 for info.argv[0] != "exit"
  */
@@ -10,7 +10,7 @@ int copy_exit(info_t *info)
 {
 	int exitcheck;
 
-	if (info->argv[1])  /* If there is an exit arguement */
+	if (info->argv[1])  /* checks If there is an exit arguement */
 	{
 		exitcheck = _erratoi(info->argv[1]);
 		if (exitcheck == -1)
@@ -29,8 +29,8 @@ int copy_exit(info_t *info)
 }
 
 /**
- * copy_cdd - changes the current directory of the process
- * @info: structure
+ * copy_cdd - a function to changes the current directory of the process
+ * @info: a struc
  *  Return: 0
  */
 int copy_cdd(info_t *info)
@@ -78,8 +78,8 @@ int copy_cdd(info_t *info)
 }
 
 /**
- * _help - Will change curr dir of process
- * @info: structure
+ * _help - a function to change curr dir of process
+ * @info: a struc
  *  Return: 0
  */
 int _help(info_t *info)

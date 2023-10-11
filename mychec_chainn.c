@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * _chain - Will check curr char
- * @info: structure
- * @buf: buffer
- * @p: address
+ * _chain - checks current char
+ * @info: a struct
+ * @buf: the buffer
+ * @p: the address
  *
  * Return: 1 otherwise 0
  */
@@ -36,12 +36,12 @@ int _chain(info_t *info, char *buf, size_t *p)
 }
 
 /**
- * chain_check - checks from last status
+ * chain_check - function to check from previous status
  * @info: parameter
- * @buf: buffer
- * @p: address
+ * @buf: the buffer
+ * @p: the address
  * @i: start
- * @len: buffer length
+ * @len: the buffer length
  * Return: void
  */
 void chain_check(info_t *info, char *buf, size_t *p, size_t i, size_t len)
@@ -69,8 +69,8 @@ void chain_check(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 }
 
 /**
- * replace_alias - Will replace alias
- * @info: parameter
+ * replace_alias - function to replace alias
+ * @info: the parameter
  * Return: 1 if replaced otherwise 0
  */
 int replace_alias(info_t *info)
@@ -97,8 +97,8 @@ int replace_alias(info_t *info)
 }
 
 /**
- * replace_var - Will replace variables
- * @info: parameter
+ * replace_var - function to replace variables
+ * @info: the parameter
  * Return: 1 if replaced otherwise 0
  */
 int replace_var(info_t *info)
@@ -137,9 +137,9 @@ int replace_var(info_t *info)
 }
 
 /**
- * replace_string - replaces string
- * @old: address of old str
- * @new: new string
+ * replace_string - function to replace string
+ * @old: the address of previous str
+ * @new: the new string
  * Return: 1 if replaced otherwise 0
  */
 int replace_string(char **old, char *new)
