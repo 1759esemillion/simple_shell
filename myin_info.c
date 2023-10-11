@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * clear_info - Reset the info_t structure.
- * @info: Pointer to the info_t structure
+ * clear_info - Will ini info_t
+ * @info: structure
  */
 void clear_info(info_t *info)
 {
@@ -13,9 +13,9 @@ void clear_info(info_t *info)
 }
 
 /**
- * set_info - Initialize the info_t structure with values from argv.
- * @info: Pointer to the info_t structure
- * @av: Argument vector (argv)
+ * set_info - Will ini info_t
+ * @info: structure
+ * @av: argvect
  */
 void set_info(info_t *info, char **av)
 {
@@ -39,19 +39,19 @@ void set_info(info_t *info, char **av)
 			;
 		info->argc = i;
 
-		rep_alias(info);
-		rep_var(info);
+		replace_alias(info);
+		replace_var(info);
 	}
 }
 
 /**
- * free_info - Free memory associated with the info_t structure.
- * @info: Pointer to the info_t structure
- * @all: True if freeing all fields
+ * free_info - Will handle info_t
+ * @info: structure
+ * @all: true if freeing all fields
  */
 void free_info(info_t *info, int all)
 {
-	string_free(info->argv);
+	str_free(info->argv);
 	info->argv = NULL;
 	info->path = NULL;
 	if (all)
@@ -64,7 +64,7 @@ void free_info(info_t *info, int all)
 			_flist(&(info->history));
 		if (info->alias)
 			_flist(&(info->alias));
-		string_free(info->environ);
+		str_free(info->environ);
 			info->environ = NULL;
 		isfree((void **)info->cmd_buffer);
 		if (info->readfd > 2)

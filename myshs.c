@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * hsh - Shell function
- * @info: Pointer to a struct
- * @av:  Array of strings (argv)
- * Return: 0 if successful, otherwise 1
+ * hsh - function for shell
+ * @info: struct
+ * @av:  argvect
+ * Return: 0 if successful otherwise 1
  */
 int hsh(info_t *info, char **av)
 {
@@ -43,22 +43,22 @@ int hsh(info_t *info, char **av)
 }
 
 /**
- * find_builtin - Finds a built-in command
- * @info: Pointer to a struct
- * Return: -1 when a built-in is found
+ * find_builtin - finds a builtin command
+ * @info: structure
+ * Return: -1 when builtin is found
  */
 int find_builtin(info_t *info)
 {
 	int i, built_in_ret = -1;
 	builtin_table builtintbl[] = {
-		{"exit", cpy_exit},
-		{"env", _myenv},
+		{"exit", copy_exit},
+		{"env", _myenvirons},
 		{"help", _help},
-		{"history", cpy_hist},
+		{"history", copy_histories},
 		{"setenv", _mysetenv},
 		{"unsetenv", _myunsetenv},
-		{"cd", cpy_cd},
-		{"alias", cpy_alias},
+		{"cd", copy_cdd},
+		{"alias", copy_alias},
 		{NULL, NULL}
 	};
 
@@ -73,8 +73,8 @@ int find_builtin(info_t *info)
 }
 
 /**
- * find_cmd - Finds a command
- * @info: Pointer to a struct
+ * find_cmd - Will find cmd
+ * @info: structure
  * Return: void
  */
 void find_cmd(info_t *info)
@@ -114,8 +114,8 @@ void find_cmd(info_t *info)
 }
 
 /**
- * fork_cmd - Forks and executes a command
- * @info: Pointer to a struct
+ * fork_cmd - function to fork exec
+ * @info: structure
  * Return: void
  */
 void fork_cmd(info_t *info)
@@ -131,7 +131,7 @@ void fork_cmd(info_t *info)
 	}
 	if (child_pid == 0)
 	{
-		if (execve(info->path, info->argv, get_environ(info)) == -1)
+		if (execve(info->path, info->argv, get_environs(info)) == -1)
 		{
 			free_info(info, 1);
 			if (errno == EACCES)

@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * get_environ - Returns a copy of the string array.
+ * get_environs - Returns a copy of the string array.
  * @info: A structure pointer.
  * Return: 0
  */
-char **get_environ(info_t *info)
+char **get_environs(info_t *info)
 {
 	if (!info->environ || info->env_changed)
 	{

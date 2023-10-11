@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * _myenv - prints current environment
+ * _myenvirons - prints current environment
  * @info: pointer to a structure
  * Return: Always 0
  */
-int _myenv(info_t *info)
+int _myenvirons(info_t *info)
 {
-	print_lstr(info->env);
+	prnt_lstr(info->env);
 	return (0);
 }
 
