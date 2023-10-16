@@ -69,11 +69,11 @@ void chain_check(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 }
 
 /**
- * replace_alias - Will replace alias
+ * rep_alias - Will replace alias
  * @info: parameter
  * Return: 1 if replaced otherwise 0
  */
-int replace_alias(info_t *info)
+int rep_alias(info_t *info)
 {
 	int i;
 	list_t *node;
@@ -97,11 +97,11 @@ int replace_alias(info_t *info)
 }
 
 /**
- * replace_var - Will replace variables
+ * rep_var - Will replace variables
  * @info: parameter
  * Return: 1 if replaced otherwise 0
  */
-int replace_var(info_t *info)
+int rep_var(info_t *info)
 {
 	int i = 0;
 	list_t *node;
@@ -113,24 +113,24 @@ int replace_var(info_t *info)
 
 		if (!_strcmp(info->argv[i], "$?"))
 		{
-			replace_string(&(info->argv[i]),
+			rep_str(&(info->argv[i]),
 				_strdup(conv_num(info->status, 10, 0)));
 			continue;
 		}
 		if (!_strcmp(info->argv[i], "$$"))
 		{
-			replace_string(&(info->argv[i]),
+			rep_str(&(info->argv[i]),
 				_strdup(conv_num(getpid(), 10, 0)));
 			continue;
 		}
 		node = _snode(info->env, &info->argv[i][1], '=');
 		if (node)
 		{
-			replace_string(&(info->argv[i]),
+			rep_str(&(info->argv[i]),
 				_strdup(_strchr(node->str, '=') + 1));
 			continue;
 		}
-		replace_string(&info->argv[i], _strdup(""));
+		rep_str(&info->argv[i], _strdup(""));
 
 	}
 	return (0);

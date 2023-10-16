@@ -51,14 +51,14 @@ int find_builtin(info_t *info)
 {
 	int i, built_in_ret = -1;
 	builtin_table builtintbl[] = {
-		{"exit", copy_exit},
-		{"env", _myenvirons},
+		{"exit", cpy_exit},
+		{"env", _myenv},
 		{"help", _help},
-		{"history", copy_histories},
+		{"history", cpy_hist},
 		{"setenv", _mysetenv},
 		{"unsetenv", _myunsetenv},
-		{"cd", copy_cdd},
-		{"alias", copy_alias},
+		{"cd", cpy_cd},
+		{"alias", cpy_alias},
 		{NULL, NULL}
 	};
 
@@ -131,7 +131,7 @@ void fork_cmd(info_t *info)
 	}
 	if (child_pid == 0)
 	{
-		if (execve(info->path, info->argv, get_environs(info)) == -1)
+		if (execve(info->path, info->argv, get_environ(info)) == -1)
 		{
 			free_info(info, 1);
 			if (errno == EACCES)

@@ -39,8 +39,8 @@ void set_info(info_t *info, char **av)
 			;
 		info->argc = i;
 
-		replace_alias(info);
-		replace_var(info);
+		rep_alias(info);
+		rep_var(info);
 	}
 }
 
