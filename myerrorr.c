@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- *_eputs - We print input
- * @str: string
+ *_eputs - prints input
+ * @str: a string
  * Return: void
  */
 void _eputs(char *str)
@@ -19,9 +19,9 @@ void _eputs(char *str)
 }
 
 /**
- * _eputchar - write c
- * @c: char
- * Return: On success 1 otherwise -1
+ * _eputchar - writes char
+ * @c: a character
+ * Return: success 1 otherwise -1
  */
 int _eputchar(char c)
 {
@@ -39,10 +39,10 @@ int _eputchar(char c)
 }
 
 /**
- * _putffd - Will write c from fd
- * @c: char
- * @fd: filedescriptor
- * Return: On success 1 otherwise -1
+ * _putffd - write c from file descriptor
+ * @c: a char
+ * @fd: file descriptor
+ * Return: success 1 otherwise -1
  */
 int _putffd(char c, int fd)
 {
@@ -60,10 +60,10 @@ int _putffd(char c, int fd)
 }
 
 /**
- *_putsffd - input is printed
- * @str: string
- * @fd: filedescriptor
- * Return: num of chars inputted
+ *_putsffd - prints input
+ * @str: a string
+ * @fd: file descriptor
+ * Return: characters inputted
  */
 int _putsffd(char *str, int fd)
 {

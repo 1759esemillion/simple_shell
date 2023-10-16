@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * _erratoi - conv string to an integer
- * @s: string
- * Return: 0 if no num in string otherwise conv num -1 on error
+ * _erratoi - converts string to integer
+ * @s: a string
+ * Return: 0 if no num in string otherwise  -1 on error
  */
 int _erratoi(char *s)
 {
@@ -28,10 +28,10 @@ int _erratoi(char *s)
 }
 
 /**
- * print_error - prints error
- * @info: structure
- * @estr: string containing specified error type
- * Return: 0 if no num in str conv num otherwise -1
+ * print_error - prints the error
+ * @info: a structure
+ * @estr: a string that contains the error type
+ * Return: 0 if num not in str conv num otherwise -1
  */
 void print_error(info_t *info, char *estr)
 {
@@ -45,10 +45,10 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
- * @input: the input
- * @fd: the filedescriptor to write to
- * Return: number of characters printed
+ * print_d - prints a decimal
+ * @input: input
+ * @fd:  filedescriptor to write
+ * Return: the number of chars printed
  */
 int print_d(int input, int fd)
 {
@@ -83,11 +83,11 @@ int print_d(int input, int fd)
 }
 
 /**
- * conv_num - function that works like itoa
- * @num: number element
- * @base: base element
- * @flags: flags parameter
- * Return: string
+ * conv_num - function to work as itoa
+ * @num: the num element
+ * @base: the  base element
+ * @flags: the flags parameter
+ * Return: a string
  */
 char *conv_num(long int num, int base, int flags)
 {
@@ -118,8 +118,8 @@ char *conv_num(long int num, int base, int flags)
 }
 
 /**
- * remove_comments - function replaces first instance of '#' with '\0'
- * @buf: address of str changed
+ * remove_comments - replaces first  '#' with '\0'
+ * @buf: the address of changed str
  * Return: 0
  */
 void remove_comments(char *buf)

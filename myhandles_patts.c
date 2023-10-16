@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * _rcmd - Will check wheather file is exec cmd
- * @info: structure
- * @path: parameter
- * Return: 1 otherwise 0
+ * _rcmd - checks if file is executeable command
+ * @info: a struct
+ * @path: a parameter
+ * Return: if 1 otherwise 0
  */
 int _rcmd(info_t *info, char *path)
 {
@@ -22,11 +22,11 @@ int _rcmd(info_t *info, char *path)
 }
 
 /**
- * char_duplicate - function will duplicate char
- * @pathstr: elemnt
- * @start: The index start
- * @stop: index stops
- * Return: pointer
+ * char_duplicate - function to duplicate a char
+ * @pathstr: the element 
+ * @start: index initialisation
+ * @stop: terminates the index 
+ *  Return: a pointer
  */
 char *char_duplicate(char *pathstr, int start, int stop)
 {
@@ -41,9 +41,9 @@ char *char_duplicate(char *pathstr, int start, int stop)
 }
 
 /**
- * _fpath - function that finds cmd
- * @info: structure
- * @pathstr: elemnt
+ * _fpath - a function that finds the command
+ * @info: a structure
+ * @pathstr: element string
  * @cmd: command
  * Return: entire path of cmd
  */
