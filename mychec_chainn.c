@@ -69,13 +69,9 @@ void chain_check(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 }
 
 /**
-<<<<<<< HEAD
  * rep_alias - Will replace alias
  * @info: parameter
-=======
  * replace_alias - function to replace alias
- * @info: the parameter
->>>>>>> b8b4ffc0cb518be41b918e41f0566928bcf60e54
  * Return: 1 if replaced otherwise 0
  */
 int rep_alias(info_t *info)
@@ -102,13 +98,9 @@ int rep_alias(info_t *info)
 }
 
 /**
-<<<<<<< HEAD
  * rep_var - Will replace variables
  * @info: parameter
-=======
  * replace_var - function to replace variables
- * @info: the parameter
->>>>>>> b8b4ffc0cb518be41b918e41f0566928bcf60e54
  * Return: 1 if replaced otherwise 0
  */
 int rep_var(info_t *info)

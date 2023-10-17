@@ -23,9 +23,9 @@ int _rcmd(info_t *info, char *path)
 
 /**
  * char_duplicate - function to duplicate a char
- * @pathstr: the element 
+ * @pathstr: the element
  * @start: index initialisation
- * @stop: terminates the index 
+ * @stop: terminates the index
  *  Return: a pointer
  */
 char *char_duplicate(char *pathstr, int start, int stop)
