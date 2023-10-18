@@ -110,15 +110,15 @@ typedef struct builtin
 } builtin_table;
 
 
-/* hsh.c */
+/* shs.c */
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 void fork_cmd(info_t *);
 
-/* handle_path.c */
+/* handle_patts.c */
 int _rcmd(info_t *, char *);
-char *c_duplicate(char *, int, int);
+char *char_duplicate(char *, int, int);
 char *_fpath(info_t *, char *, char *);
 
 /* loop */
@@ -127,10 +127,10 @@ int loophsh(char **);
 /* errors.c */
 void _eputs(char *);
 int _eputchar(char);
-int _putfd(char c, int fd);
-int _putsfd(char *str, int fd);
+int _putffd(char c, int fd);
+int _putsffd(char *str, int fd);
 
-/* str_copy3.c */
+/* str_copy2.c */
 int _strlen(char *);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
@@ -152,12 +152,12 @@ char **_str_split(char *, char *);
 char **_str_split2(char *, char);
 
 /* handle_mem.c */
-char *setmemo(char *, char, unsigned int);
-void str_free(char **);
+char *setmemos(char *, char, unsigned int);
+void string_free(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
-/* handle_mem1.c */
-int isfree(void **);
+/* handle_mem0.c */
+int isfreed(void **);
 
 /* interactive_shell.c*/
 int interactive(info_t *);
@@ -165,41 +165,41 @@ int is_delim(char, char *);
 int _isalpha(int);
 int _atoi(char *);
 
-/* conv_str.c */
+/* convert_str.c */
 int _erratoi(char *);
 void print_error(info_t *, char *);
 int print_d(int, int);
 char *conv_num(long int, int, int);
-void rm_comments(char *);
+void remove_comments(char *);
 
-/* builtin.c */
-int cpy_exit(info_t *);
-int cpy_cd(info_t *);
+/* builltin.c */
+int copy_exit(info_t *);
+int copy_cdd(info_t *);
 int _help(info_t *);
 
-/* builtin1.c */
-int cpy_hist(info_t *);
-int cpy_alias(info_t *);
+/* builltin0.c */
+int copy_histories(info_t *);
+int copy_alias(info_t *);
 
-/* getline.c */
+/* mygetlines.c */
 ssize_t get_input(info_t *);
 int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
-/*init_ info.c */
+/*myin_info.c */
 void clear_info(info_t *);
 void set_info(info_t *, char **);
 void free_info(info_t *, int);
 
-/* setenv.c*/
+/* mysetenv.c*/
 char *_getenv(info_t *, const char *);
-int _myenv(info_t *);
+int _myenvirons(info_t *);
 int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
 int populate_env_list(info_t *);
 
-/* setenv2.c */
-char **get_environ(info_t *);
+/* setenv1.c */
+char **get_environs(info_t *);
 int _unsetenv(info_t *, char *);
 int _setenv(info_t *, char *, char *);
 

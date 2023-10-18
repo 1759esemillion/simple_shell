@@ -31,7 +31,7 @@ ssize_t input_buff(info_t *info, char **buf, size_t *len)
 				r--;
 			}
 			info->lincnt_flag = 1;
-			rm_comments(*buf);
+			remove_comments(*buf);
 			list_history(info, *buf, info->histcnt++);
 
 			{

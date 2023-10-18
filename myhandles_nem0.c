@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * isfreed - Will free ptr
+ * isfree - Will free ptr
  * @ptr: ptr address
  * Return: 1 otherwise 0.
  */

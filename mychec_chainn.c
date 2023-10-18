@@ -144,7 +144,7 @@ int rep_var(info_t *info)
  * @new: the new string
  * Return: 1 if replaced otherwise 0
  */
-int replace_string(char **old, char *new)
+int rep_str(char **old, char *new)
 {
 	free(*old);
 	*old = new;
