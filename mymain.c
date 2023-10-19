@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * Main function - the entry point
+ * main - the entry point
  * @ac: Argument count
  * @av: Argument vector
  * Return: 0 if successful, otherwise 1

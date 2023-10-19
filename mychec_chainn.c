@@ -139,7 +139,7 @@ int rep_var(info_t *info)
 }
 
 /**
- * replace_string - function to replace string
+ * rep_str - function to replace string
  * @old: the address of previous str
  * @new: the new string
  * Return: 1 if replaced otherwise 0

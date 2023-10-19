@@ -3,11 +3,9 @@
 /**
  * **_str_split - function that will split string
  * of strings using a specified delimiter.
- *
  * @str: The input string to be split.
  * @del: The delimiter character used for splitting.
- *
- * @return A pointer to an array of strings, or NULL on failure.
+ * Return: pointer || Null
  */
 char **_str_split(char *str, char *del)
 {
@@ -51,12 +49,10 @@ char **_str_split(char *str, char *del)
 }
 
 /**
- * _str_split2 - Split a string into an array
- * of strings using a specified delimiter.
- *
+ * _str_split2 - Split a string into an array using a specified delimiter.
  * @str: The input string to be split.
  * @del: delimeter
- * @return A pointer to an array of strings, or NULL on failure.
+ * Return: A pointer to an arraay or  NULL.
  */
 char **_str_split2(char *str, char del)
 {

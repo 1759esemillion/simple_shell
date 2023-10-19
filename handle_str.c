@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * end_anode - Adds a node at the end of a linked list.
+ * _anode - Adds a node at the end of a linked list.
  * @head: Pointer to a pointer to the list.
  * @str: String to store in the new node.
  * @num: Index for the new node.
@@ -73,7 +73,7 @@ list_t *end_anode(list_t **head, const char *str, int num)
 }
 
 /**
- * prnt_lstr - Prints the string element of each node in the list.
+ * print_lstr - Prints the string element of each node in the list.
  * @h: Pointer to the list.
  * Return: The size of the list.
  */

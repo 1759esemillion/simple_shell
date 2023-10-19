@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- **setmemo - adds constant byte in memory
+ **setmemos - adds constant byte in memory
  *@s: a pointer
  *@b: the byte
  *@n: number of bytes
@@ -17,7 +17,7 @@ char *setmemos(char *s, char b, unsigned int n)
 }
 
 /**
- * str_free -  frees a string
+ * string_free -  frees a string
  * @pp: a string
  */
 void string_free(char **pp)
